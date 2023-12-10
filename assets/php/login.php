@@ -10,12 +10,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST" )
         $num = mysqli_num_rows($result);
         if ($num>0)
         {
-            echo "<script>alert('Logged In Successfully');</script>"; 
-            echo '<a href="../../index.html"> Return to homepage </a>';
+            echo "<script>alert('Logged In Successfully');</script>";
         }
         else
         {
             echo "<script>alert('Invalid Credentials');</script>"; 
-            echo '<a href="../../index.html"> Return to homepage </a>';
         }
 }
+?>
+<script type="text/javascript">
+window.location.href = '../../index.html';
+</script>
+<?php
+?>
