@@ -13,12 +13,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST" )
         $result = mysqli_query($conn, $sql);
         if ($result)
         {
-            echo "<script>alert('Account Successfully Created');</script>"; 
-            echo '<a href="../../index.html"> Return to homepage </a>';
+            echo "<script>alert('Account Successfully Created');</script>";
         } 
     }
     else{
         echo "<script>alert('Passwords do not match');</script>";
-        echo '<a href="../../index.html"> Return to homepage </a>';
     }
 }
+?>
+<script type="text/javascript">
+window.location.href = '../../index.html';
+</script>
+<?php
